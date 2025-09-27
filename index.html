@@ -1,35 +1,124 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Prime Pianos - Home</title>
-    <link rel="stylesheet" href="styles/main.css">
+    <meta name="description" content="Prime Pianos">
+    <meta name="theme-color" content="#111111">
+    <meta name="name" content="Prime Pianos">
+    <meta name="application-name" content="Prime Pianos">
+
+    <link rel="shortcut icon" href="favicon.ico">
+    <link rel="icon" sizes="128x128" href="images/pp_logo_128.png">
+    <link rel="icon" sizes="180x180" href="images/pp_logo_180.JPG">
+    <link rel="icon" sizes="192x192" href="images/pp_logo_192.JPG">
+    <link rel="icon" sizes="256x256" href="images/pp_logo_256.JPG">
+    <link rel="icon" sizes="512x512" href="images/pp_logo_512.JPG">
+
+    <link rel="stylesheet" href="styles/normalize.css">
+    <link rel="stylesheet" href="styles/base.css">
+    <link rel="stylesheet" href="styles/medium.css">
+    <link rel="stylesheet" href="styles/large.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <script src="scripts/jquery-3.7.1.min.js"></script>
+    <script src="scripts/script.js"></script>
+    <script src="scripts/weather.js" defer></script>
+    <script type="text/javascript">
+        $(function () {
+            $("[data-load]").each(function () {
+                $(this).load($(this).data("load"), function () {
+                });
+            });
+        })
+    </script>
+    <title>Prime Pianos</title>
 </head>
+<div data-load="header.html"></div>
+
 <body>
-    <div data-load="includes/header.html"></div>
-
+    <script>
+        displayBannerIfValid();
+        displayNewsIfValid();
+    </script>
     <main>
-        <section class="hero">
-            <h1>Welcome to Prime Pianos</h1>
-            <p>Your trusted piano tuning experts.</p>
-        </section>
+        <div class="hero">
+            <picture class="hero-image-container">
+                <source srcset="images/pianotuning1.png" media="(min-width:748px) and (max-width:1199px)">
+                <source srcset="images/pianotuning1.png" media="(min-width:1200px)">
+                <img src="images/pianotuning1.png" class="hero-img" width="400" height="225" alt="Piano Tuning">
+            </picture>
+        </div>
+        <div class="banner notification home-page-card">
+        </div>
+        <div class="card-container">
+            <div class="about-card home-page-card">
+                <h2>Prime Pianos</h2>
+                <div class="two-column-card">
+                    <div class="left-column">
+                        <h2>🎹 Precision Piano Tuning You Can Hear</h2>
+                        <p>We specialize in professional piano tuning that brings out the true voice of your
+                            instrument—whether it's a cherished upright or a concert-ready grand.</p>
 
-        <!-- Image gallery -->
-        <section class="gallery">
-            <figure>
-                <img src="/images/pianotuning1.png" alt="Piano tuning 1">
-            </figure>
-            <figure>
-                <img src="images/pianotuning2.png" alt="Piano tuning 2">
-            </figure>
-        </section>
+                        <h3>Why Choose Us?</h3>
+                        <ul class="about-list">
+                            <li>🎯 <b>Unmatched Accuracy</b>
+                                <p>We don’t just tune — we calibrate. Every string, every pin, every nuance is adjusted
+                                    with precision to ensure
+                                    your piano sounds its absolute best.</p>
+                            </li>
+                            <li>⏱️ <b>Reliable Scheduling</b>
+                                <p>We respect your time. Our appointments are prompt, our service is efficient, and our
+                                    follow-up is thorough.
+                                </p>
+                            </li>
+                            <li>🎼 <b>Trusted by Musicians & Institutions</b>
+                                <p>From private homes to schools and performance venues, our clients rely on us to keep
+                                    their instruments in peak condition.
+                                </p>
+                            </li>
+                            <li>💬 <b>Transparent Communication</b>
+                                <p>We have upfront pricing, and we explain what we’re doing, why it matters, and how to maintain your piano between
+                                    visits. No jargon, no guesswork — just clarity.
+                                </p>
+                            </li>
+
+
+                            <h3>Hear the Difference</h3>
+                            <p>A well-tuned piano doesn’t just sound better—it inspires better playing. Whether you're
+                                preparing for a recital,
+                                teaching students, or simply enjoying music at home, we’ll make sure your piano is ready
+                                to perform.</p>
+
+                        </ul>
+
+                    </div>
+                    <div class="right-column">
+                        <img src="images/piano_playing.png" alt="piano playing" width="250" style="border: none;">
+                    </div>
+                </div>
+                <div>
+                    <h3 class="news-header">News</h3>
+                    <ul class="news-list">
+
+                    </ul>
+                </div>
+            </div>
+            <div class="home-page-card contact-us-card">
+                <h2>Schedule Today!</h2>
+                <p>Ready to experience the Prime Pianos difference? Contact us today to schedule your piano
+                    tuning appointment.</p>
+                <p><a href="mailto:primepianos@gmail.com">primepianos@gmail.com</a></p>
+                <p>Phone: (253) 553 4663</p>
+                <img src="images/pianotuning2.png" alt="piano tuning" width="250" style="border: none;">    
+            </div>
+            
+            </div>
+
     </main>
-
-    <div data-load="includes/footer.html"></div>
-
-    <!-- jQuery (required) + loader -->
-    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-    <script src="scripts/main.js"></script>
+    <div data-load="footer.html"></div>
 </body>
+
 </html>

@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Prime Pianos">
+    <meta name="theme-color" content="#111111">
+    <meta name="name" content="Prime Pianos">
+    <meta name="application-name" content="Prime Pianos">
+
+    <link rel="shortcut icon" href="favicon.ico">
+    <link rel="icon" sizes="128x128" href="images/harc_logo/harc_logo_128.png">
+    <link rel="icon" sizes="180x180" href="images/harc_logo/harc_logo_180.JPG">
+    <link rel="icon" sizes="192x192" href="images/harc_logo/harc_logo_192.JPG">
+    <link rel="icon" sizes="256x256" href="images/harc_logo/harc_logo_256.JPG">
+    <link rel="icon" sizes="512x512" href="images/harc_logo/harc_logo_512.JPG">
+
+    <link rel="stylesheet" href="styles/normalize.css">
+    <link rel="stylesheet" href="styles/base.css">
+    <link rel="stylesheet" href="styles/medium.css">
+    <link rel="stylesheet" href="styles/large.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <script src="scripts/jquery-3.7.1.min.js"></script>
+    <script src="scripts/script.js" defer></script>
+    <script type="text/javascript">
+        $(function () {
+            $("[data-load]").each(function () {
+                $(this).load($(this).data("load"), function () {
+                });
+            });
+        })
+    </script>
+    <title>Prime Pianos</title>
+</head>
+<div data-load="header.html"></div>
+
+<body>
+    <main>
+        <div class="card-container">
+            <div class="full-width-card home-page-card">
+                <table style="width:100%; border-collapse:collapse; font-family:Arial, sans-serif;">
+                    <thead>
+                        <tr style="background-color:#f2f2f2;">
+                            <th style="border:1px solid #ccc; padding:10px; text-align:left;">Service</th>
+                            <th style="border:1px solid #ccc; padding:10px; text-align:left;">Rate</th>
+                            <th style="border:1px solid #ccc; padding:10px; text-align:left;">Details</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td style="border:1px solid #ccc; padding:10px;">Initial Piano Tuning</td>
+                            <td style="border:1px solid #ccc; padding:10px;">$200</td>
+                            <td style="border:1px solid #ccc; padding:10px;">Includes full inspection and pitch
+                                adjustment</td>
+                        </tr>
+                        <tr>
+                            <td style="border:1px solid #ccc; padding:10px;">Annual Maintenance Tuning</td>
+                            <td style="border:1px solid #ccc; padding:10px;">$150</td>
+                            <td style="border:1px solid #ccc; padding:10px;">Recommended once per year after initial
+                                service</td>
+                        </tr>
+                        <tr>
+                            <td style="border:1px solid #ccc; padding:10px;">Repairs & Parts</td>
+                            <td style="border:1px solid #ccc; padding:10px;">At Cost</td>
+                            <td style="border:1px solid #ccc; padding:10px;">Parts billed at cost; labor quoted
+                                case-by-case</td>
+                        </tr>
+                    </tbody>
+                </table>
+
+            </div>
+
+        </div>
+    </main>
+    <div data-load="footer.html"></div>
+</body>
+
+</html>
